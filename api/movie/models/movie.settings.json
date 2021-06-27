@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "name": "movie",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "videos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "movie"
+    },
+    "movieType": {
+      "type": "enumeration",
+      "enum": [
+        "movie",
+        "drama",
+        "anime",
+        "music",
+        "life"
+      ]
+    },
+    "movie": {
+      "type": "enumeration",
+      "enum": [
+        "comedy",
+        "romantic",
+        "action",
+        "fantasy"
+      ]
+    },
+    "drama": {
+      "type": "enumeration",
+      "enum": [
+        "romantic",
+        "history",
+        "comedy",
+        "family"
+      ]
+    },
+    "anime": {
+      "type": "enumeration",
+      "enum": [
+        "fantasy",
+        "action",
+        "romantic",
+        "school"
+      ]
+    },
+    "life": {
+      "type": "enumeration",
+      "enum": [
+        "guitar",
+        "puzzle",
+        "fishing",
+        "skateboard",
+        "skiing",
+        "other"
+      ]
+    },
+    "mainPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "music": {
+      "type": "enumeration",
+      "enum": [
+        "concert",
+        "animeAMV",
+        "other"
+      ]
+    }
+  }
+}

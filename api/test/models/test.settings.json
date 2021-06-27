@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "name": "test",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "visitor_country": {
+      "type": "string"
+    },
+    "visitor_city": {
+      "type": "string"
+    },
+    "visitor_ip": {
+      "type": "string"
+    },
+    "visitor_latitude": {
+      "type": "string"
+    },
+    "visitor_longitude": {
+      "type": "string"
+    },
+    "day_count": {
+      "type": "string",
+      "default": "1"
+    },
+    "visitor_postal": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}
